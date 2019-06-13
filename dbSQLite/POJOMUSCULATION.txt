@@ -1,0 +1,70 @@
+CREATE TABLE "USUARIOS" (
+	"ID_U"	INTEGER,
+	"NOMBRE"	TEXT,
+	"TIPO"	TEXT,
+	PRIMARY KEY("ID_U")
+);
+
+CREATE TABLE "EJERCICIOS" (
+	"ID_EJ"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"NOMBRE"	TEXT,
+	"DESCRIPCION"	TEXT,
+	"REPETICIONES"	INTEGER,
+	"MUSCULOS"	TEXT
+);
+
+CREATE TABLE "MUSCULOS" (
+	"ID_M"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"NOMBRE_M"	TEXT,
+	"REGION"	TEXT
+);
+
+INSERT INTO USUARIOS VALUES (1, 'Cliente1', 'Cliente');
+INSERT INTO USUARIOS VALUES (2, 'Monitor1', 'Monitor');
+INSERT INTO USUARIOS VALUES (3, 'Cliente2', 'Cliente');
+INSERT INTO USUARIOS VALUES (4, 'Monitor2', 'Monitor');
+
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Bíceps braquial', 'Brazo');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Braquial Anterior', 'Brazo');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Tríceps', 'Brazo');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Ancóneo', 'Brazo');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Flexores de Muñeca', 'Antebrazo');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Extensores de Muñeca', 'Antebrazo');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Deltoides', 'Hombro');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Pectoral Mayor', 'Pecho');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Abdominales', 'Abdomen');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Dorsal ancho', 'Espalda');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Trapecio', 'Espalda');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Glúteos', 'Cadera');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Bíceps femoral', 'Pierna');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Semitendinoso', 'Pierna');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Semimembranoso', 'Pierna');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Cúadriceps', 'Pierna');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Tensor de la Fascia Lata', 'Pierna');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Tibial anterior', 'Pantorrilla');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Peroneos', 'Pantorrilla');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Sóleo', 'Pantorrilla');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Gemelos', 'Pantorrilla');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Extensores de los dedos', 'Pie');
+INSERT INTO MUSCULOS (NOMBRE_M, REGION) VALUES ('Flexores de los dedos', 'Pie');
+
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión de brazos con mancuernas', 'Tomando una mancuerna consiste en flexionar el codo superando los 90º', 10, 'Bíceps braquial, Braquial Anterior, Flexores de Muñeca');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Extensión de brazos con mancuernas', 'Tomando una mancuerna con codo doblado detrás de la cabeza consiste en extender el codo totalmente', 10, 'Tríceps, Ancóneo');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Extensión de muñecas con pesa', 'Con dorso de la mano mirando hacia arriba y sosteniendo un peso, extender la muñeca hacia arriba', 12, 'Extensores de Muñeca');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión de muñecas con pesa', 'Con dorso de la mano mirando hacia abajo y sosteniendo un peso, flexionar la muñeca hacia arriba', 12, 'Flexores de Muñeca');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Elevación de brazos con barra', 'Con hombros y codos a 90º, empujar barra con peso hacia arriba elevando los hombros', 13, 'Deltoides');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Elevación de hombros con mancuerna', 'Con brazos a lo largo del cuerpo sosteniendo mancuerna, realizar elevación del hombro hacia arriba', 12, 'Trapecio');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión de brazos hacia el pecho', 'Boca abajo, elevar el cuerpo apoyando las palmas en el suelo', 15, 'Pectoral Mayor');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexiones dominadas en barra', 'Con barra más alta que el cuerpo consiste en elevar el cuerpo hacia ella traccionando de la barra', 12, 'Dorsal ancho');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión de tronco (abdominales)', 'Tumbado boca arriba, flexionar el abdomen elevando el tronco hacia arriba', 35, 'Abdominales');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Extensión de cadera con cinta', 'Con pierna levemente adelantada, llevar la pierna hacia atrás contra-resistencia', 15, 'Glúteos');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión de rodilla con barra', 'Tumbado boca abajo, doblar la rodilla hacia arriba contra resistencia', 12, 'Bíceps femoral, Semitendinoso, Semimembranoso');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Elevación de pelvis tumbado', 'Acostado boca arriba, elevar la pelvis doblando las rodillas', 12, 'Glúteos, Bíceps femoral, Semitendinoso, Semimembranoso');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Extensión de rodilla con barra', 'Sentado con rodillas flexionadas, extender la rodilla hacia arriba contra-resistencia', 15, 'Cúadriceps');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Elevación lateral de cadera', 'Tumbado de medio lado con piernas estiradas, elevar la pierna hacia arriba', 13, 'Tensor de la Fascia Lata, Glúteos');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión dorsal de tobillo con lastre', 'Sentado con plantas apoyadas, elevar el pie contra-resistencia dejando apoyado el talón', 12, 'Tibial anterior');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión lateral de tobillo', 'Sentado con plantas apoyadas, elevar el pie lateralmente contra-resistencia dejando apoyada la parte media', 12, 'Peroneos');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Elevación de talones', 'Sentado con plantas apoyadas, elevar el talón del pie dejando apoyados los dedos', 12, 'Sóleo');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Ejercicio de puntillas con peso', 'De pie con presión sobre los hombros, ponerse de puntillas', 20, 'Gemelos');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Extensión de los dedos', 'Tumbrado boca abajo presionar con los dedos contra la superficie de apoyo', 12, 'Extensores de los dedos');
+INSERT INTO EJERCICIOS (NOMBRE, DESCRIPCION, REPETICIONES, MUSCULOS) VALUES ('Flexión de los dedos', 'Sentado con plantas apoyadas, presionar con los dedos contra la superficie de apoyo', 12, 'Flexores de los dedos');
